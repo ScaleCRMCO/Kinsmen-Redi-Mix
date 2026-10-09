@@ -211,18 +211,86 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section section-tight">
-          <div className="container sister">
-            <div>
-              <p className="eyebrow">Part of the Kinsmen family</p>
-              <p className="sister-text">
-                Need the concrete placed too? Our sister company, Kinsmen Consulting,
-                delivers residential and commercial concrete work in Calgary.
-              </p>
+        <section id="founder" className="section">
+          <div className="container founder">
+            <div className="founder-photo">
+              <Image
+                src="/terry-jensen.avif"
+                alt="Terry Jensen, founder of Kinsmen Redi-Mix and Kinsmen Consulting"
+                fill
+                sizes="(max-width: 900px) 100vw, 480px"
+                className="founder-photo-img"
+              />
             </div>
-            <a href={SISTER_SITE} target="_blank" rel="noopener noreferrer" className="link-arrow">
-              Visit Kinsmen Consulting <Arrow />
+            <div>
+              <p className="eyebrow">About the Founder</p>
+              <h2 className="section-title">Terry Jensen</h2>
+              <p className="founder-role">President &amp; Founder</p>
+              <div className="lead-text founder-text">
+                <p>
+                  Terry Jensen is a veteran of the Southern Alberta construction sector
+                  with three decades of craftsmanship and operational leadership. Rising
+                  from hands-on finisher to master contractor, Terry built a deep
+                  understanding of concrete science and large-scale project logistics.
+                </p>
+                <p>
+                  After founding Kinsmen Consulting, Terry saw first-hand how often
+                  projects across Alberta are held back by concrete supply. Kinsmen
+                  Redi-Mix is the answer: a mobile plant, trucks and crews that bring
+                  reliable ready-mix to the job, wherever it is.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="kinsmen-family" className="section family">
+          <div className="container">
+            <a
+              href={SISTER_SITE}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="family-logo"
+              aria-label="Visit Kinsmen Consulting Ltd."
+            >
+              <Image
+                src="/kinsmen-consulting-logo.jpg"
+                alt="Kinsmen Consulting Limited"
+                width={2000}
+                height={664}
+                sizes="360px"
+              />
             </a>
+            <div className="split family-split">
+              <h2 className="section-title">Two Companies, One Kinsmen Standard</h2>
+              <div className="lead-text">
+                <p>
+                  Kinsmen Redi-Mix and our sister company, Kinsmen Consulting Ltd., work
+                  together to deliver complete concrete services for commercial and
+                  residential projects.
+                </p>
+                <p className="quote">
+                  Kinsmen Redi-Mix supplies the concrete. Kinsmen Consulting places and
+                  finishes it, from commercial foundations and industrial slabs to
+                  driveways and backyard projects. One family, one point of contact, from
+                  batch to finished pour.
+                </p>
+              </div>
+            </div>
+            <ul className="rows family-rows">
+              <li>
+                <a href="#contact">
+                  <span>Concrete Supply <small>Kinsmen Redi-Mix</small></span>
+                  <Arrow />
+                </a>
+              </li>
+              <li>
+                <a href={SISTER_SITE} target="_blank" rel="noopener noreferrer">
+                  <span>Placing &amp; Finishing <small>Kinsmen Consulting</small></span>
+                  <Arrow />
+                </a>
+              </li>
+            </ul>
           </div>
         </section>
       </main>

@@ -97,11 +97,6 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; line-height: 1.2; }
 .areas li.future span { color: var(--muted); }
 .areas li.future em { color: var(--red); }
 
-.sister {
-  display: flex; justify-content: space-between; align-items: center; gap: 32px;
-  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 48px 32px;
-}
-.sister-text { font-size: 1.4rem; max-width: 640px; }
 .link-arrow { display: inline-flex; align-items: center; gap: 10px; font-size: 1.15rem; white-space: nowrap; }
 .link-arrow:hover { color: var(--red); }
 
@@ -128,7 +123,6 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; line-height: 1.2; }
   .rows { grid-template-columns: 1fr; }
   .stats { grid-template-columns: 1fr; gap: 32px; margin-top: 64px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
-  .sister { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 640px) {
   .container, .header-inner { padding-left: 16px; padding-right: 16px; }
@@ -138,7 +132,6 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; line-height: 1.2; }
   .hero-tag { left: 16px; right: 16px; bottom: 16px; justify-content: space-between; gap: 16px; padding: 16px 20px; font-size: 1.05rem; }
   .section { padding: 72px 0; }
   .section-tight { padding: 24px 0 72px; }
-  .sister { padding: 32px 0; }
   .footer-grid { grid-template-columns: 1fr; }
 }
 .footer-logo-link { display: inline-block; }
@@ -169,3 +162,23 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; line-height: 1.2; }
 }
 .plant-photo { position: relative; aspect-ratio: 16 / 9; margin-top: 2rem; overflow: hidden; }
 .plant-photo-img { object-fit: cover; object-position: 55% center; }
+
+/* Founder + Kinsmen family */
+.founder { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: center; }
+.founder-photo { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--grey); }
+.founder-photo-img { object-fit: cover; object-position: center top; }
+.founder .section-title { margin-bottom: 0.25rem; }
+.founder-role { color: var(--muted); font-size: 1.1rem; margin-bottom: 2rem; }
+.founder-text p { font-size: clamp(1.1rem, 1.6vw, 1.4rem); }
+.family { background: #000; color: var(--white); border-bottom: 1px solid rgba(255,255,255,0.15); }
+.family-logo { display: inline-block; margin-bottom: 56px; }
+.family-logo img { width: 360px; max-width: 100%; height: auto; }
+.family .lead-text p { color: var(--white); }
+.family .lead-text .quote { color: rgba(255,255,255,0.65); }
+.family-rows { margin-top: 64px; }
+.family-rows a:hover { color: var(--red); }
+@media (max-width: 900px) {
+  .founder { grid-template-columns: 1fr; gap: 32px; }
+  .founder-photo { max-width: 420px; }
+}
+.family-rows small { display: block; font-size: 0.95rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
