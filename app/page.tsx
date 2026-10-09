@@ -65,8 +65,8 @@ export default function Home() {
         {/* Hero: stock photo placeholder until we have our own plant photos */}
         <section className="hero">
           <Image
-            src="/hero-mobile-plant.webp"
-            alt="Mobile concrete batch plant being hauled on a highway"
+            src="/hero-b120.webp"
+            alt="Böhringer B120 mobile batch plant on its trailer"
             fill
             priority
             sizes="100vw"
@@ -122,6 +122,15 @@ export default function Home() {
             <div>
               <p className="eyebrow">Our Plant</p>
               <h2 className="section-title">Böhringer B120 Mobile Batch Plant</h2>
+              <div className="plant-photo">
+                <Image
+                  src="/plant-highway.webp"
+                  alt="Böhringer B120 mobile batch plant being hauled on a highway"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 480px"
+                  className="plant-photo-img"
+                />
+              </div>
             </div>
             <div className="lead-text plant-text">
               <p>
@@ -133,17 +142,6 @@ export default function Home() {
                 Fresh concrete, made where the job is. That means shorter haul times,
                 consistent quality and supply for remote sites that a fixed plant can&apos;t reach.
               </p>
-            </div>
-          </div>
-          <div className="container">
-            <div className="plant-photo">
-              <Image
-                src="/b120-plant.webp"
-                alt="Böhringer B120 mobile batch plant on its trailer"
-                fill
-                sizes="(max-width: 1240px) 100vw, 1176px"
-                className="plant-photo-img"
-              />
             </div>
           </div>
           <div className="container specs">
