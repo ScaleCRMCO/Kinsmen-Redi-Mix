@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 
 // Placeholder contact details: replace once confirmed.
 const CONTACT_EMAIL = "info@kinsmenredimix.ca";
-const CONTACT_PHONE = "(403) 000-0000";
+const CONTACT_PHONE = "(403) 471-0022";
 const SISTER_SITE = "https://www.kinsmenconsulting.ca/";
 
 const stats = [
@@ -311,7 +311,7 @@ export default function Home() {
             <div>
               <h3>Calgary</h3>
               <p>Calgary, Alberta</p>
-              <p>T: {CONTACT_PHONE}</p>
+              <p><a href="tel:+14034710022">T: {CONTACT_PHONE}</a></p>
               <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
             </div>
             <div>
