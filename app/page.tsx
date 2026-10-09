@@ -7,7 +7,7 @@ const CONTACT_PHONE = "(403) 000-0000";
 const SISTER_SITE = "https://www.kinsmenconsulting.ca/";
 
 const stats = [
-  { value: "100%", label: "Mobile batch plant" },
+  { value: "30+", label: "Years of experience" },
   { value: "AB", label: "Province-wide supply" },
   { value: "365", label: "Days a year, winter-ready" },
 ];
