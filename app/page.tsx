@@ -135,6 +135,17 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <div className="container">
+            <div className="plant-photo">
+              <Image
+                src="/b120-plant.webp"
+                alt="Böhringer B120 mobile batch plant on its trailer"
+                fill
+                sizes="(max-width: 1240px) 100vw, 1176px"
+                className="plant-photo-img"
+              />
+            </div>
+          </div>
           <div className="container specs">
             {plantSpecs.map((s) => (
               <div key={s.label} className="spec">
