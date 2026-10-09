@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <header className={`header ${solid ? "header-solid" : ""}`}>
       <div className="header-inner">
-        <a href="#top" aria-label="Kinsmen Redi-Mix home">
+        <a href="/" aria-label="Kinsmen Redi-Mix home">
           <Image
             src={solid ? "/logo-dark.svg" : "/logo.svg"}
             alt="Kinsmen Redi-Mix"

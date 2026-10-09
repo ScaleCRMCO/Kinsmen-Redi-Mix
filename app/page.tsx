@@ -156,7 +156,9 @@ export default function Home() {
 
       <footer id="contact" className="footer">
         <div className="container">
-          <Image src="/logo.svg" alt="Kinsmen Redi-Mix" width={160} height={120} className="footer-logo" />
+          <a href="/" aria-label="Kinsmen Redi-Mix home" className="footer-logo-link">
+            <Image src="/logo.svg" alt="Kinsmen Redi-Mix" width={160} height={120} className="footer-logo" />
+          </a>
           <div className="footer-grid">
             <div>
               <h3>Quick Links</h3>
