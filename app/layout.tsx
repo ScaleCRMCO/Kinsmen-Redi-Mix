@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   title: "Kinsmen Redi-Mix | Mobile Ready-Mix Concrete in Alberta",
   description:
     "Kinsmen Redi-Mix is a mobile ready-mix concrete supplier serving Calgary and communities across Alberta, with Churchill, Manitoba as a future development.",
-  icons: { icon: "/logo.svg" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
