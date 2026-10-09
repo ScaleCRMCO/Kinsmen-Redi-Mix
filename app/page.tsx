@@ -28,6 +28,24 @@ const fullService = [
   { n: "03", title: "The Crew", body: "Experienced operators, drivers and support crew run the operation start to finish. You focus on the build." },
 ];
 
+const whyKrm = [
+  {
+    title: "Why Choose Kinsmen Redi-Mix",
+    subtitle: "Concrete Supply You Can Count On",
+    body: "We bring the plant, trucks and crew to your project, so you aren't waiting on a fixed yard hours away. Backed by more than 30 years in Alberta concrete, we know what a good pour needs and we show up ready to deliver it.",
+  },
+  {
+    title: "What Makes Us Different",
+    subtitle: "Supplier and Contractor Under One Name",
+    body: "Most suppliers only sell concrete. Through our sister company, Kinsmen Consulting, our people also place and finish it, so we understand the job from batch to finished slab. That field experience shapes every mix we deliver.",
+  },
+  {
+    title: "Our Goals & Vision",
+    subtitle: "Reliable Concrete for Every Community",
+    body: "Our goal is to become the go-to concrete supplier for towns and cities across Alberta that have been underserved by fixed plants, then grow beyond the province, starting with Churchill, Manitoba.",
+  },
+];
+
 const products = [
   "Structural Concrete",
   "Foundations & Footings",
@@ -170,6 +188,45 @@ export default function Home() {
                   <p>{f.body}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="why-krm" className="section why">
+          <div className="container">
+            <h2 className="why-heading">
+              <span className="accent">The Kinsmen Difference</span> in Practice
+            </h2>
+            <p className="why-intro">
+              Our crews have spent decades pouring concrete across Southern Alberta. That
+              experience on the receiving end of the truck is what Kinsmen Redi-Mix is
+              built on.
+            </p>
+            <div className="why-grid">
+              <div className="why-photo">
+                <Image
+                  src="/crew-concrete-work.avif"
+                  alt="Kinsmen crew placing and finishing concrete on site"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 560px"
+                  className="why-photo-img"
+                />
+              </div>
+              <div className="why-items">
+                {whyKrm.map((w) => (
+                  <div key={w.title} className="why-item">
+                    <h3>
+                      <span className="accent">{w.title}</span>
+                      <br />
+                      {w.subtitle}
+                    </h3>
+                    <p>{w.body}</p>
+                  </div>
+                ))}
+                <a href="#contact" className="text-link">
+                  Talk to us about your project →
+                </a>
+              </div>
             </div>
           </div>
         </section>
