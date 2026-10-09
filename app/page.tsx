@@ -1,153 +1,188 @@
 import Image from "next/image";
+import Header from "@/components/Header";
 
 // Placeholder contact details: replace once confirmed.
 const CONTACT_EMAIL = "info@kinsmenredimix.ca";
+const CONTACT_PHONE = "(403) 000-0000";
 const SISTER_SITE = "https://www.kinsmenconsulting.ca/";
 
+const stats = [
+  { value: "100%", label: "Mobile batch plant" },
+  { value: "AB", label: "Province-wide supply" },
+  { value: "365", label: "Days a year, winter-ready" },
+];
+
 const products = [
-  { name: "Structural Mixes", spec: "25 – 40 MPa", body: "Engineered mixes for footings, foundations, walls and suspended slabs." },
-  { name: "Flatwork & Exterior", spec: "Air-entrained", body: "Freeze-thaw resistant mixes for driveways, sidewalks and patios." },
-  { name: "Winter Concrete", spec: "Heated / accelerated", body: "Hot-water batching and accelerators for year-round pours in Canadian winters." },
-  { name: "Specialty Mixes", spec: "Fibre · Flowable fill", body: "Fibre-reinforced, flowable fill and custom designs to your spec." },
+  "Structural Concrete",
+  "Foundations & Footings",
+  "Flatwork & Paving",
+  "Winter / Heated Mixes",
+  "Fibre-Reinforced Concrete",
+  "Flowable Fill",
+  "Remote & Industrial Projects",
+  "Custom Mix Designs",
 ];
 
-const locations = [
-  { city: "Calgary", region: "Alberta", status: "First plant", active: true },
-  { city: "Churchill", region: "Manitoba", status: "Planned", active: false },
-  { city: "Across Canada", region: "Coast to coast", status: "Future", active: false },
+const areas = [
+  { name: "Calgary & Area", note: "Home base" },
+  { name: "Southern Alberta", note: "Serving now" },
+  { name: "Central Alberta", note: "Serving now" },
+  { name: "Northern Alberta", note: "Serving now" },
+  { name: "Rural & Remote Sites", note: "On request" },
+  { name: "Churchill, Manitoba", note: "Future development" },
 ];
 
-const pillars = [
-  { n: "01", title: "Built by contractors", body: "Backed by the field experience of Kinsmen Consulting, so we know what a good pour needs." },
-  { n: "02", title: "Consistent quality", body: "Tested and batched to spec so every load arrives the same as the last." },
-  { n: "03", title: "On-time delivery", body: "Reliable dispatch so your crew isn't left waiting for the truck." },
-];
+function Arrow() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
+      <path d="M7 17L17 7M9 7h8v8" />
+    </svg>
+  );
+}
 
 export default function Home() {
   return (
     <>
-      <header className="nav">
-        <div className="container nav-inner">
-          <Image src="/logo.svg" alt="Kinsmen Redi-Mix" width={120} height={90} priority className="nav-logo" />
-          <nav className="nav-links">
-            <a href="#products">Products</a>
-            <a href="#locations">Locations</a>
-            <a href="#about">About</a>
-            <a href="#contact" className="btn btn-sm">Get a Quote</a>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
-      <main>
+      <main id="top">
+        {/* Hero: stock photo placeholder until we have our own plant photos */}
         <section className="hero">
-          <div className="hero-grain" aria-hidden />
-          <div className="container hero-inner">
-            <p className="eyebrow"><span className="dot" /> Now building in Calgary, Alberta</p>
+          <Image
+            src="/hero-mobile-plant.jpg"
+            alt="Mobile concrete batch plant on site"
+            fill
+            priority
+            sizes="100vw"
+            className="hero-img"
+          />
+          <div className="hero-overlay" />
+          <div className="container hero-content">
             <h1>
-              Ready-mix concrete,<br />
-              <span className="accent">poured right.</span>
+              Kinsmen Redi-Mix: Mobile Ready-Mix Concrete Supply Across Alberta
             </h1>
-            <p className="lead">
-              Kinsmen Redi-Mix is a new Canadian concrete supplier delivering consistent,
-              high-quality ready-mix to contractors and builders, starting in Calgary
-              and growing across the country.
-            </p>
-            <div className="hero-cta">
-              <a href="#contact" className="btn">Request a Quote</a>
-              <a href="#products" className="btn btn-ghost">Our Products →</a>
-            </div>
           </div>
-          <div className="container stats">
-            <div><strong>25–40</strong><span>MPa mix range</span></div>
-            <div><strong>Year-round</strong><span>Winter-ready batching</span></div>
-            <div><strong>Canada</strong><span>Built to expand</span></div>
+          <div className="hero-tag">
+            <span className="hero-tag-label">Mobile Batch Plant</span>
+            <a href="#contact">
+              Get a Quote <Arrow />
+            </a>
           </div>
         </section>
 
-        <section id="products" className="section">
-          <div className="container">
-            <p className="kicker">Products</p>
-            <h2>Mixes for every pour.</h2>
-            <div className="grid-4">
-              {products.map((p) => (
-                <article key={p.name} className="card">
-                  <span className="card-spec">{p.spec}</span>
-                  <h3>{p.name}</h3>
-                  <p>{p.body}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="locations" className="section section-alt">
+        <section id="about" className="section">
           <div className="container split">
-            <div>
-              <p className="kicker">Locations</p>
-              <h2>Starting in Calgary.<br />Built for Canada.</h2>
-              <p className="muted">
-                Our first batch plant is coming to Calgary, with plans to bring
-                Kinsmen Redi-Mix to Churchill, Manitoba and communities across Canada.
+            <h2 className="section-title">About Us</h2>
+            <div className="lead-text">
+              <p>
+                Kinsmen Redi-Mix is a mobile ready-mix concrete supplier built to bring
+                the plant to the project. Instead of hauling concrete hours from a fixed
+                yard, we set up where the work is.
+              </p>
+              <p>
+                From Calgary to communities across Alberta, our goal is to be the
+                dependable concrete supplier for towns, contractors and industry that
+                have been underserved for too long.
+              </p>
+              <p className="quote">
+                &ldquo;Good concrete starts with showing up. We bring the plant, the
+                people and the quality, wherever the job is.&rdquo;
               </p>
             </div>
-            <ul className="locations">
-              {locations.map((l) => (
-                <li key={l.city} className={l.active ? "active" : ""}>
-                  <div>
-                    <strong>{l.city}</strong>
-                    <span>{l.region}</span>
-                  </div>
-                  <em>{l.status}</em>
+          </div>
+
+          <div className="container stats">
+            {stats.map((s) => (
+              <div key={s.label} className="stat">
+                <strong>{s.value}</strong>
+                <span>{s.label}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="products" className="section section-tight">
+          <div className="container">
+            <h2 className="section-title">Products &amp; Services</h2>
+            <ul className="rows">
+              {products.map((p) => (
+                <li key={p}>
+                  <a href="#contact">
+                    <span>{p}</span>
+                    <Arrow />
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
         </section>
 
-        <section id="about" className="section">
-          <div className="container">
-            <p className="kicker">Why Kinsmen</p>
-            <h2>A family name you can build on.</h2>
-            <div className="grid-3">
-              {pillars.map((p) => (
-                <div key={p.n} className="pillar">
-                  <span className="pillar-n">{p.n}</span>
-                  <h3>{p.title}</h3>
-                  <p>{p.body}</p>
-                </div>
+        <section id="service-area" className="section section-grey">
+          <div className="container split">
+            <div>
+              <h2 className="section-title">Service Area</h2>
+              <p className="muted">
+                Because our plant is mobile, our service area grows with demand.
+                We&apos;re focused on Alberta first, with Churchill, Manitoba planned as
+                a future development.
+              </p>
+            </div>
+            <ul className="areas">
+              {areas.map((a) => (
+                <li key={a.name} className={a.note === "Future development" ? "future" : ""}>
+                  <span>{a.name}</span>
+                  <em>{a.note}</em>
+                </li>
               ))}
-            </div>
-            <div className="sister">
-              <div>
-                <p className="kicker">Part of the Kinsmen family</p>
-                <p className="sister-text">
-                  Need the concrete placed too? Our sister company, Kinsmen Consulting,
-                  handles residential and commercial concrete work in Calgary.
-                </p>
-              </div>
-              <a href={SISTER_SITE} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
-                Visit Kinsmen Consulting ↗
-              </a>
-            </div>
+            </ul>
           </div>
         </section>
 
-        <section id="contact" className="section cta">
-          <div className="container cta-inner">
-            <h2>Let&apos;s talk about your next pour.</h2>
-            <p className="muted">
-              We&apos;re just getting started. Reach out for pricing, supply partnerships or
-              to be first in line when the plant opens.
-            </p>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="btn">{CONTACT_EMAIL}</a>
+        <section className="section section-tight">
+          <div className="container sister">
+            <div>
+              <p className="eyebrow">Part of the Kinsmen family</p>
+              <p className="sister-text">
+                Need the concrete placed too? Our sister company, Kinsmen Consulting,
+                delivers residential and commercial concrete work in Calgary.
+              </p>
+            </div>
+            <a href={SISTER_SITE} target="_blank" rel="noopener noreferrer" className="link-arrow">
+              Visit Kinsmen Consulting <Arrow />
+            </a>
           </div>
         </section>
       </main>
 
-      <footer className="footer">
-        <div className="container footer-inner">
-          <Image src="/logo.svg" alt="Kinsmen Redi-Mix" width={80} height={60} />
-          <p>© {new Date().getFullYear()} Kinsmen Redi-Mix. Calgary, Alberta, Canada.</p>
+      <footer id="contact" className="footer">
+        <div className="container">
+          <Image src="/logo.svg" alt="Kinsmen Redi-Mix" width={160} height={120} className="footer-logo" />
+          <div className="footer-grid">
+            <div>
+              <h3>Quick Links</h3>
+              <a href="#about">About</a>
+              <a href="#products">Products</a>
+              <a href="#service-area">Service Area</a>
+              <a href={SISTER_SITE} target="_blank" rel="noopener noreferrer">Kinsmen Consulting</a>
+            </div>
+            <div>
+              <h3>Calgary</h3>
+              <p>Calgary, Alberta</p>
+              <p>T: {CONTACT_PHONE}</p>
+              <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+            </div>
+            <div>
+              <h3>Future Developments</h3>
+              <p>Churchill, Manitoba</p>
+              <p>More communities to come</p>
+            </div>
+            <div>
+              <h3>Get a Quote</h3>
+              <p>Tell us about your project and location.</p>
+              <a href={`mailto:${CONTACT_EMAIL}`} className="btn">Contact Us</a>
+            </div>
+          </div>
+          <p className="copyright">© {new Date().getFullYear()} Kinsmen Redi-Mix. All rights reserved.</p>
         </div>
       </footer>
     </>
