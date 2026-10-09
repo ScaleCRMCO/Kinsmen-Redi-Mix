@@ -348,6 +348,18 @@ export default function Home() {
                 </a>
               </li>
             </ul>
+            <div className="community">
+              <p className="eyebrow">Community &amp; Diversity</p>
+              <p>
+                Kinsmen Redi-Mix and Kinsmen Consulting actively recruit First Nations
+                people as part of our belief in a diverse workforce. We&apos;re proud to
+                employ members of{" "}
+                <a href="https://siksikanation.com/" target="_blank" rel="noopener noreferrer">
+                  Siksika Nation
+                </a>{" "}
+                on our crews.
+              </p>
+            </div>
           </div>
         </section>
       </main>
