@@ -65,8 +65,8 @@ export default function Home() {
         {/* Hero: stock photo placeholder until we have our own plant photos */}
         <section className="hero">
           <Image
-            src="/hero-mobile-plant.jpg"
-            alt="Mobile concrete batch plant on site"
+            src="/hero-mobile-plant.webp"
+            alt="Mobile concrete batch plant being hauled on a highway"
             fill
             priority
             sizes="100vw"
