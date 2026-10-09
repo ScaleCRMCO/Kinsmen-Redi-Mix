@@ -12,6 +12,22 @@ const stats = [
   { value: "365", label: "Days a year, winter-ready" },
 ];
 
+// Böhringer B120 details from dealer listings: confirm against the official spec sheet.
+const plantSpecs = [
+  { label: "Setup time", value: "About 1 hour" },
+  { label: "Foundations required", value: "None" },
+  { label: "Cement storage", value: "Onboard silo" },
+  { label: "Aggregate bins", value: "3 compartments" },
+  { label: "Batch cycle", value: "2–3 minutes" },
+  { label: "Feed", value: "Front-end loader" },
+];
+
+const fullService = [
+  { n: "01", title: "The Plant", body: "Our Böhringer B120 mobile batch plant is set up on or near your site, so concrete is batched fresh where you need it." },
+  { n: "02", title: "The Trucks", body: "We supply our own mixer trucks to deliver every load from the plant to the pour, on your schedule." },
+  { n: "03", title: "The Crew", body: "Experienced operators, drivers and support crew run the operation start to finish. You focus on the build." },
+];
+
 const products = [
   "Structural Concrete",
   "Foundations & Footings",
@@ -98,6 +114,54 @@ export default function Home() {
                 <span>{s.label}</span>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section id="plant" className="section plant">
+          <div className="container split">
+            <div>
+              <p className="eyebrow">Our Plant</p>
+              <h2 className="section-title">Böhringer B120 Mobile Batch Plant</h2>
+            </div>
+            <div className="lead-text plant-text">
+              <p>
+                The B120 is a fully mobile concrete batch plant that travels by road and
+                sets up in about an hour, with no permanent foundations. It carries its
+                own cement silo and aggregate bins and batches concrete on site.
+              </p>
+              <p className="quote">
+                Fresh concrete, made where the job is. That means shorter haul times,
+                consistent quality and supply for remote sites that a fixed plant can&apos;t reach.
+              </p>
+            </div>
+          </div>
+          <div className="container specs">
+            {plantSpecs.map((s) => (
+              <div key={s.label} className="spec">
+                <span>{s.label}</span>
+                <strong>{s.value}</strong>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="full-service" className="section">
+          <div className="container">
+            <h2 className="section-title">Full-Service Supply</h2>
+            <p className="muted wide">
+              Kinsmen Redi-Mix doesn&apos;t just rent out a plant. We bring the plant,
+              the trucks and a full crew, so you get a complete concrete supply operation
+              on your project.
+            </p>
+            <div className="service-grid">
+              {fullService.map((f) => (
+                <div key={f.n} className="service">
+                  <span className="service-n">{f.n}</span>
+                  <h3>{f.title}</h3>
+                  <p>{f.body}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

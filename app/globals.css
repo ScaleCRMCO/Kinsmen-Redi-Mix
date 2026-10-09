@@ -142,3 +142,28 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.01em; line-height: 1.2; }
   .footer-grid { grid-template-columns: 1fr; }
 }
 .footer-logo-link { display: inline-block; }
+
+/* Plant + full-service sections */
+.plant { background: var(--black); color: var(--white); }
+.plant .plant-text p { color: var(--white); }
+.plant .plant-text .quote { color: rgba(255,255,255,0.65); }
+.specs {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.3);
+}
+.spec { padding: 28px 24px 28px 0; border-bottom: 1px solid rgba(255,255,255,0.3); }
+.spec span { display: block; color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 6px; }
+.spec strong { font-family: var(--font-display), sans-serif; font-weight: 500; font-size: 1.6rem; }
+.muted.wide { max-width: 720px; }
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 64px; }
+.service { border-top: 2px solid var(--red); padding-top: 24px; }
+.service-n { display: block; color: var(--red); font-size: 0.9rem; margin-bottom: 1rem; }
+.service h3 { font-size: 1.6rem; margin-bottom: 0.75rem; }
+.service p { color: var(--muted); font-size: 1.05rem; }
+@media (max-width: 900px) {
+  .specs { grid-template-columns: 1fr 1fr; }
+  .service-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 640px) {
+  .specs { grid-template-columns: 1fr; margin-top: 48px; }
+}
